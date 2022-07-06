@@ -1,0 +1,24 @@
+---
+title: "01_droplet_filtering"
+author: "Mikhael Manurung"
+date: "2022-07-07"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+## Introduction
+
+```{r libs}
+suppressMessages({
+  library(tidyverse)
+})
+```
+
+```{r}
+iris %>% 
+  ggplot(aes(Species, Sepal.Length)) +
+  geom_boxplot() +
+  theme_minimal()
+```
+
